@@ -9,7 +9,7 @@ version: 2.1
 # See: https://circleci.com/docs/orb-intro/
 orbs:
   # See the Android orb documentation here: https://circleci.com/developer/orbs/orb/circleci/android
-  android: circleci/android@2.4.0
+  android: circleci/android@2.5.0
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
@@ -60,7 +60,7 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  testing: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
