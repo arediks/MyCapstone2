@@ -22,7 +22,7 @@ android {
         consumerProguardFiles("consumer-rules.pro")
 
         buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
-        buildConfigField("String", "API_KEY", "\"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\"")
+        buildConfigField("String", "API_KEY", "\"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\"")
     }
 
     buildTypes {
@@ -94,4 +94,7 @@ dependencies {
 
     // flow binding
     api("io.github.reactivecircus.flowbinding:flowbinding-android:1.2.0")
+
+    // debug leakcanary
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 }

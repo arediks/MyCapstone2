@@ -66,7 +66,6 @@ class UserFavoriteActivity : AppCompatActivity() {
                     is Result.Success -> {
                         binding.progressBar.visibility = View.GONE
                         val userFavorite = result.data
-                        Log.d("testingtestingtesting", "${result.data}")
                         userFavoriteAdapter.submitList(userFavorite)
                         binding.tvEmptyFavorite.visibility =
                             if (userFavorite.isEmpty()) View.VISIBLE else View.GONE

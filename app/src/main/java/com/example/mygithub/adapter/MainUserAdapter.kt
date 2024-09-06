@@ -26,7 +26,6 @@ class MainUserAdapter(private val onFavoriteClick: (GitUserList, Int) -> Unit) :
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailUserActivity::class.java)
                 intent.putExtra(DetailUserActivity.EXTRA_USER, GitUserList(user.id, user.login, user.avatarUrl, user.isFavorite))
-                Log.d("testingtestingtesting", "bind: ${user.login}")
                 itemView.context.startActivity(intent)
             }
         }

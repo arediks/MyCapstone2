@@ -12,7 +12,6 @@ android {
 
     buildFeatures {
         viewBinding = true
-        buildConfig = true
     }
 
     defaultConfig {
@@ -23,9 +22,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
-        buildConfigField("String", "API_KEY", "\"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\"")
     }
 
     buildTypes {
@@ -55,4 +51,7 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.51.1")
     ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+
+    // debug leakcanary
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 }
