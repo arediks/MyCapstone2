@@ -6,10 +6,11 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
+import io.github.osipxd.security.crypto.encryptedPreferencesDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-val Context.datastore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+val Context.datastore: DataStore<Preferences> by encryptedPreferencesDataStore(name = "settings")
 
 class SettingPreferences(private val dataStore: DataStore<Preferences>){
     private val themeKey = booleanPreferencesKey(THEME_SETTING)
