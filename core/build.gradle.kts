@@ -72,9 +72,6 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 
-    // datastore
-    implementation("androidx.datastore:datastore-preferences:1.1.1")
-
     // by viewModels in activity and fragment
     api("androidx.activity:activity-ktx:1.9.0")
     api("androidx.fragment:fragment-ktx:1.8.1")
