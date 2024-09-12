@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.CertificatePinner
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -18,6 +19,11 @@ class NetworkModule {
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
+        val hostname = BuildConfig.HOST_NAME
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, BuildConfig.CERT_1)
+            .add(hostname, BuildConfig.CERT_2)
+            .build()
         val loggingInterceptor =
             if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -34,6 +40,7 @@ class NetworkModule {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .addInterceptor(authInterceptor)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
