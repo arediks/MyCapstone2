@@ -50,6 +50,7 @@ object DataMapper {
 
     fun mapGitUserListToFavoriteEntity(input: GitUserList): FavoriteEntity =
         FavoriteEntity(
+            fid = null,
             id = input.id,
             login = input.login,
             avatarUrl = input.avatarUrl

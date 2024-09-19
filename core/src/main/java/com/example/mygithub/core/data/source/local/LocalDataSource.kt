@@ -25,7 +25,7 @@ class LocalDataSource @Inject constructor(
 
     suspend fun insertFavorite(userFavorite: FavoriteEntity) = favoriteDao.insertFavorite(userFavorite)
 
-    suspend fun deleteFavorite(userFavorite: FavoriteEntity) = favoriteDao.deleteFavorite(userFavorite)
+    suspend fun deleteFavorite(userFavorite: FavoriteEntity) = favoriteDao.deleteFavorite(userFavorite.id)
 
     // Setting Preferences
     fun getThemeSetting() = pref.getThemeSetting()
