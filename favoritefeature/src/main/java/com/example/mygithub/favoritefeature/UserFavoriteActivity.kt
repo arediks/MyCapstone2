@@ -1,7 +1,6 @@
 package com.example.mygithub.favoritefeature
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -78,12 +77,5 @@ class UserFavoriteActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    private fun generateUserFavorite() {
-    }
-
-    companion object {
-        const val ACTIVITY_TITLE = "Favorite User"
     }
 }

@@ -72,8 +72,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     // coroutine support
-    api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3")
-    api("androidx.lifecycle:lifecycle-livedata-ktx:2.8.3")
+    api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+    api("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
     implementation("androidx.room:room-ktx:2.6.1")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
@@ -83,8 +83,8 @@ dependencies {
     ksp("androidx.room:room-compiler:2.6.1")
 
     // by viewModels in activity and fragment
-    api("androidx.activity:activity-ktx:1.9.0")
-    api("androidx.fragment:fragment-ktx:1.8.1")
+    api("androidx.activity:activity-ktx:1.9.2")
+    api("androidx.fragment:fragment-ktx:1.8.3")
 
     // splash screen
     api("androidx.core:core-splashscreen:1.0.1")
@@ -94,7 +94,7 @@ dependencies {
     ksp("com.google.dagger:hilt-android-compiler:2.51.1")
 
     // paging 3
-    api("androidx.paging:paging-runtime-ktx:3.3.0")
+    api("androidx.paging:paging-runtime-ktx:3.3.2")
 
     // room with paging support
     implementation("androidx.room:room-paging:2.6.1")
