@@ -80,9 +80,6 @@ class UserFavoriteActivity : AppCompatActivity() {
         }
     }
 
-    private fun generateUserFavorite() {
-    }
-
     companion object {
         const val ACTIVITY_TITLE = "Favorite User"
     }

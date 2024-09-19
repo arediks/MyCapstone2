@@ -120,6 +120,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_favorite_border_24"
         android:layout_margin="16dp"
+        android:contentDescription="@string/favorite_this_user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
