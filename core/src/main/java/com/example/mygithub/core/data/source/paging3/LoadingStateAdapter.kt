@@ -18,6 +18,7 @@ class LoadingStateAdapter(private val retry: () -> Unit) :
             binding.retryButton.setOnClickListener { retry.invoke() }
         }
 
+        @Suppress("unused")
         fun bind(loadState: LoadState) {
             if (loadState is LoadState.Error) {
                 binding.errorMsg.text = loadState.error.localizedMessage
