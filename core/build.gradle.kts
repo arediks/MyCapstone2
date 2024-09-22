@@ -25,7 +25,6 @@ android {
         buildConfigField("String", "CERT_1", "\"sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=\"")
         buildConfigField("String", "CERT_2", "\"sha256/lmo8/KPXoMsxI+J9hY+ibNm2r0IYChmOsF9BxD74PVc=\"")
         buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
-        buildConfigField("String", "API_KEY", "\"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\"")
     }
 
     buildTypes {
